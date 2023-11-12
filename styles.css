@@ -1,0 +1,91 @@
+body{
+    
+    text-align: center;
+    color: black;
+    background-color: #FBBC05;
+}
+
+
+#title{
+    border: 1px solid black;
+    width: 500px;
+    height: 40px;
+    display: flex;
+    margin:0 auto;
+    flex-wrap: wrap
+    
+}
+
+
+#pieces{
+    border: 15px solid #EA4335;
+    display: flex;
+    margin:0 auto;
+    flex-wrap: wrap;
+    width: 360px;
+    height: 360px;
+    background-color: #EA4335;
+    border-radius: 5px;
+    
+}
+
+#piece, img {
+    width: 118px;
+    height: 118px;
+    border: 1px solid #EA4335;
+    border-radius: 5px;
+}
+
+#footer{
+    border: 15px solid #EA4335;
+    background-color: #EA4335;
+    width: 360px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin:0 auto;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+h3{
+    border: 1px solid black;
+
+    border-radius: 5px;
+}
+
+#continue{
+    font-size: 24px;
+
+}
+
+/*////////////////end of will code /////////////////*/
+
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0c67ae;
+}
+
+#title {
+    height: 150px;
+    width: 400px;
+}
+
+#board {
+    width: 360px;
+    height: 360px;
+    background-color: lightblue;
+    border: 10px solid #0c67ae;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#board img {
+    width: 118px;
+    height: 118px;
+    border: 1px solid #0c67ae;
+} */
