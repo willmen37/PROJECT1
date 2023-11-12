@@ -1,7 +1,7 @@
-let randomPuzzle = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
-
+const randomPuzzle = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
 const originalPuzzle = ["1", "2", "3", "4", "5", "6","7","8","9"];
-let puzzle = [...originalPuzzle];
+
+let puzzle = [...randomPuzzle];
 
 let xLine = 3;
 let yLine = 3;
@@ -167,7 +167,7 @@ function timer(minutes){
 
 function restart()
 {
-     puzzle = [...originalPuzzle]  
+     puzzle = [...randomPuzzle]  
 }
 ///////////////////////////////GAME WON///////////////////////////////////////////////
 function win()
@@ -177,12 +177,10 @@ function win()
 
             return
 
-        }else{
-
-            console.log("you won!");
-
         }
-    }    
+    } 
+    
+    console.log("you won!")
     
 
 
