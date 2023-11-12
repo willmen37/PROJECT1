@@ -7,20 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    
-        <div id="title">
-            <h1> Jurassic Park Slide Puzzle</h1>
-        </div>
+    <div id="title"></div>
 
-        <div id="pieces" ></div>
-        
-
-        <footer id="footer">
-        <!-- <h3> Moves:   <span id="moves"> 0 </span> </h3> -->
-        <h3> Time   <span id="timer"> 00 </span> </h3>
-        <h3>  <button id="continue"> Play!  </button> </h3>
-        </footer>
+    <div id="pieces" ></div>
     
+
+    <footer id="footer">
+     <!-- <h3> Moves:   <span id="moves"> 0 </span> </h3> -->
+     <h3> Time   <span id="timer"> 00 </span> </h3>
+     <h3>  <button id="continue"> Play!  </button> </h3>
+    </footer>
     
 
     <script src="PSproject1.js"></script>

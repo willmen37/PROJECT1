@@ -1,0 +1,60 @@
+body{
+    
+    text-align: center;
+    color: black;
+    background-color: #55ACEE;
+
+}
+
+#title{
+    border: 1px solid black;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    margin:0 auto;
+    flex-wrap: wrap
+    
+}
+
+
+#pieces{
+    border: 15px solid palegoldenrod;
+    display: flex;
+    margin:0 auto;
+    flex-wrap: wrap;
+    width: 360px;
+    height: 360px;
+    background-color: paleturquoise;
+    border-radius: 5px;
+}
+
+#piece, img {
+    width: 118px;
+    height: 118px;
+    border: 1px solid paleturquoise;
+    border-radius: 5px;
+}
+
+#footer{
+    border: 15px solid palegoldenrod;
+    background-color: palegoldenrod;
+    width: 360px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin:0 auto;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+h3{
+    border: 1px solid black;
+
+    border-radius: 5px;
+}
+
+#continue{
+    font-size: 24px;
+
+}
