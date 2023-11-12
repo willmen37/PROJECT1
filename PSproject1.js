@@ -1,20 +1,13 @@
+let randomPuzzle = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
+
+const originalPuzzle = ["1", "2", "3", "4", "5", "6","7","8","9"];
+let puzzle = [...originalPuzzle];
+
 let xLine = 3;
 let yLine = 3;
 
 let currentPiece;
 let blankPiece;
-
-// let moves = 0;
-
-
-
-let puzzle = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
-
-// let finalPuzzle = ["1", "2", "3", "4", "5", "6","7","8","9"];
-// let rightCombination = [];
-// console.log(finalPuzzle)
-
-
 
 // function start(){
 
@@ -27,7 +20,7 @@ window.onload = function(){
 
             let piece = document.createElement('img');
             piece.id = i.toString() + "-" + j.toString();
-            piece.src = puzzle.shift() + ".jpg";
+            piece.src = randomPuzzle.shift() + ".jpg";
 
             // let finalPiece ;
             // finalPiece.id = i.toString() + "-" + j.toString();
@@ -51,13 +44,14 @@ window.onload = function(){
     }
 
     
+    win()
 
 }
 
 function dragStart()
 {
     currentPiece = this; //piece being selected by clicking
-    console.log(currentPiece)
+    // console.log(currentPiece)
 }
 
 function dragOver(e)
@@ -108,10 +102,10 @@ function dragEnd()
     let downMove = y1 == y2 && x2 == x1+1;
     // console.log(downMove)
 
-    let isAdjacent = leftMove || rightMove || upMove || downMove;//CHANGE THE NAME OF THIS*******
+    let adjacency = leftMove || rightMove || upMove || downMove;
 
 
-     if(isAdjacent){
+     if(adjacency){
 
         let movedPiece = currentPiece.src;
         let replacedPiece = blankPiece.src;
@@ -120,8 +114,7 @@ function dragEnd()
         currentPiece.src = replacedPiece;
         blankPiece.src = movedPiece;
 
-        // moves += 1;
-        // document.getElementById("moves").innerText=moves;
+  
 
     }
 
@@ -174,29 +167,29 @@ function timer(minutes){
 
 function restart()
 {
-
+     puzzle = [...originalPuzzle]  
 }
 ///////////////////////////////GAME WON///////////////////////////////////////////////
 function win()
-{
+{    
+    for(let i = 0; i< puzzle.length; i++){
+        if(puzzle[i] !== originalPuzzle[i]){
 
+            return
+
+        }else{
+
+            console.log("you won!");
+
+        }
+    }    
     
-    const areArraysEqual = puzzle.every((element, index) => {
-        return element === finalPuzzle[index];
-        });
-  
-        // console.log(areArraysEqual); // true
 
-    if(areArraysEqual){
 
-        alert("you won")
-        
-
-    }
-
+    restart()
+    
 }
 
-//  win()
 ///////////////////////////////GAME LOST/////////////////////////////////////////////
 function lose()
 {
