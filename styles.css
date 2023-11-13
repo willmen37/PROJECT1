@@ -1,8 +1,13 @@
 body{
     
     text-align: center;
-    color: #D3D3D3;
-    background-color: #3366FF;
+    color: #CC0099;
+    background: url(background.jpg);
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 
@@ -19,7 +24,7 @@ body{
 
 
 #pieces{
-    border: 15px solid #DCDCDC;
+    border: 15px solid #000066;
     display: flex;
     margin:0 auto;
     flex-wrap: wrap;
@@ -28,9 +33,9 @@ body{
     background-color: #585858;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    box-shadow: 10px 10px #a9a9a9;
+    box-shadow: 10px 10px #6666FF;
     outline-style: solid;
-    outline-color: #585858;
+    outline-color: #CC0099;
     outline-width: medium;
     
 
@@ -45,8 +50,8 @@ body{
 }
 
 #footer{
-    border: 15px solid #DCDCDC;
-    background-color: #DCDCDC;
+    border: 15px solid #000066;
+    background-color: #000066;
     width: 360px;
     height: 70px;
     display: flex;
@@ -56,9 +61,9 @@ body{
     flex-wrap: wrap;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    box-shadow: 10px 10px #a9a9a9;
+    box-shadow: 10px 10px #6666FF;
     outline-style: solid;
-    outline-color: #585858;
+    outline-color: #CC0099;
     outline-width: medium;
 }
 
@@ -69,10 +74,10 @@ h1{
 
 h3{
     border: 1px solid black;
-    color: white;
+    color: #CC00CC;
     border-radius: 5px;
-    font-size: 24px;
-    background-color: #33CCFF
+    font-size: 30px;
+
 }
 
 #continue{

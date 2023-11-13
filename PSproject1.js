@@ -1,13 +1,17 @@
-const randomPuzzle = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
-const originalPuzzle = ["1", "2", "3", "4", "5", "6","7","8","9"];
-
-let puzzle = [...randomPuzzle];
-
 let xLine = 3;
 let yLine = 3;
 
 let currentPiece;
 let blankPiece;
+
+
+let originalPuzzle = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
+const solutionPuzzle = ["1", "2", "3", "4", "5", "6","7","8","9"];
+
+let puzzle = [...originalPuzzle];
+// console.log(puzzle)
+
+
 
 // function start(){
 
@@ -20,14 +24,9 @@ window.onload = function(){
 
             let piece = document.createElement('img');
             piece.id = i.toString() + "-" + j.toString();
-            piece.src = randomPuzzle.shift() + ".jpg";
+            piece.src = originalPuzzle.shift() + ".jpg";
 
-            // let finalPiece ;
-            // finalPiece.id = i.toString() + "-" + j.toString();
-            // finalPuzzle.push(finalPiece.src)
-            
-
-           
+                   
             //Movement functionality
 
             piece.addEventListener("dragstart", dragStart);
@@ -39,11 +38,12 @@ window.onload = function(){
 
             document.getElementById("pieces").append(piece);
  
-            
-        }   
+                      
+        } 
+        
+        
     }
 
-    
     win()
 
 }
@@ -105,7 +105,7 @@ function dragEnd()
     let adjacency = leftMove || rightMove || upMove || downMove;
 
 
-     if(adjacency){
+    if(adjacency){
 
         let movedPiece = currentPiece.src;
         let replacedPiece = blankPiece.src;
@@ -113,11 +113,9 @@ function dragEnd()
 
         currentPiece.src = replacedPiece;
         blankPiece.src = movedPiece;
-
-  
-
     }
 
+    
 }
 
 //////////////////////////////////TIMER/////////////////////////////////////////////
@@ -163,30 +161,30 @@ function timer(minutes){
 
 // timer(1)
 
-//////////////////////////////RESTART GAME//////////////////////////////////////////////
-
-function restart()
-{
-     puzzle = [...randomPuzzle]  
-}
 ///////////////////////////////GAME WON///////////////////////////////////////////////
 function win()
 {    
     for(let i = 0; i< puzzle.length; i++){
-        if(puzzle[i] !== originalPuzzle[i]){
+        if(puzzle[i] !== solutionPuzzle[i]){
 
-            return
+            return false;
 
         }
     } 
-    
-    console.log("you won!")
-    
-
-
-    restart()
+    return true;
     
 }
+
+//////////////////////////////RESTART GAME//////////////////////////////////////////////
+
+function restart()
+{
+     puzzle = [...randomPuzzle];
+     
+}
+
+
+
 
 ///////////////////////////////GAME LOST/////////////////////////////////////////////
 function lose()
