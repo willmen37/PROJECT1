@@ -8,7 +8,7 @@ let blankPiece;
 let originalPuzzle = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
 const solutionPuzzle = ["1", "2", "3", "4", "5", "6","7","8","9"];
 
-let puzzle = [...originalPuzzle];
+let puzzle; 
 // console.log(puzzle)
 
 
@@ -25,7 +25,6 @@ window.onload = function(){
             let piece = document.createElement('img');
             piece.id = i.toString() + "-" + j.toString();
             piece.src = originalPuzzle.shift() + ".jpg";
-
                    
             //Movement functionality
 
@@ -44,15 +43,19 @@ window.onload = function(){
         
     }
 
-    win()
+    puzzle = document.querySelectorAll("#pieces img" );
+    // console.log(puzzle)
 
+    
 }
 
 function dragStart()
 {
     currentPiece = this; //piece being selected by clicking
     // console.log(currentPiece)
+    
 }
+
 
 function dragOver(e)
 {
@@ -116,6 +119,11 @@ function dragEnd()
     }
 
     
+
+    win()
+
+
+    
 }
 
 //////////////////////////////////TIMER/////////////////////////////////////////////
@@ -164,14 +172,25 @@ function timer(minutes){
 ///////////////////////////////GAME WON///////////////////////////////////////////////
 function win()
 {    
+    // console.log(puzzle, solutionPuzzle)
     for(let i = 0; i< puzzle.length; i++){
-        if(puzzle[i] !== solutionPuzzle[i]){
 
+        let w = puzzle[i].src.slice(-5, -4);
+        // console.log(w + "new loop")
+
+        
+        if( w !== solutionPuzzle[i]){
+            // alert("wrong call");
             return false;
 
         }
-    } 
+
+
+    }
+    alert("CONGRATULATIONS!!! YOU WIN."); 
     return true;
+    
+     
     
 }
 
