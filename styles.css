@@ -1,8 +1,8 @@
 body{
     
     text-align: center;
-    color: black;
-    background-color: #FBBC05;
+    color: #D3D3D3;
+    background-color: #3366FF;
 }
 
 
@@ -19,27 +19,34 @@ body{
 
 
 #pieces{
-    border: 15px solid #EA4335;
+    border: 15px solid #DCDCDC;
     display: flex;
     margin:0 auto;
     flex-wrap: wrap;
     width: 360px;
     height: 360px;
-    background-color: #EA4335;
-    border-radius: 5px;
+    background-color: #585858;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 10px 10px #a9a9a9;
+    outline-style: solid;
+    outline-color: #585858;
+    outline-width: medium;
+    
+
     
 }
 
 #piece, img {
     width: 118px;
     height: 118px;
-    border: 1px solid #EA4335;
+    border: 1px solid #585858;
     border-radius: 5px;
 }
 
 #footer{
-    border: 15px solid #EA4335;
-    background-color: #EA4335;
+    border: 15px solid #DCDCDC;
+    background-color: #DCDCDC;
     width: 360px;
     height: 70px;
     display: flex;
@@ -47,13 +54,25 @@ body{
     justify-content: space-around;
     margin:0 auto;
     flex-wrap: wrap;
-    border-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 10px 10px #a9a9a9;
+    outline-style: solid;
+    outline-color: #585858;
+    outline-width: medium;
+}
+
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
 
 h3{
     border: 1px solid black;
-
+    color: white;
     border-radius: 5px;
+    font-size: 24px;
+    background-color: #33CCFF
 }
 
 #continue{
