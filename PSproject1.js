@@ -18,7 +18,7 @@ let puzzle;
 // }
 
 ///////BOARD FUNCTIONALITY/////////////////////////////////////
-window.onload = function(){
+window.onload = function loadGame(){
     for (let i=0; i < xLine; i++){
         for (let j=0; j < yLine; j++){
 
@@ -134,7 +134,7 @@ keepPlaying.addEventListener("click",  function(){
 });
 
 function timer(minutes){
-    let seconds = 10;
+    let seconds = 5;
     let min = minutes;
 
     function ticking () {
@@ -153,21 +153,18 @@ function timer(minutes){
                 timer(min - 1);
             }
         }
-
-
         if(seconds == 0){
 
-            alert("Game Over")
-
+            gameOver()
+    
         }
-
         
     }
     ticking();
+    
 
 }
 
-// timer(1)
 
 ///////////////////////////////GAME WON///////////////////////////////////////////////
 function win()
@@ -188,7 +185,9 @@ function win()
 
     }
     alert("CONGRATULATIONS!!! YOU WIN."); 
-    return true;
+    
+
+    
     
      
     
@@ -198,7 +197,14 @@ function win()
 
 function restart()
 {
-     puzzle = [...randomPuzzle];
+    
+    let playAgain = prompt("Play again Y/N?");
+    console.log(playAgain);
+
+    if(playAgain == "Y")
+    {
+        location.reload();
+    }
      
 }
 
@@ -206,9 +212,10 @@ function restart()
 
 
 ///////////////////////////////GAME LOST/////////////////////////////////////////////
-function lose()
+function gameOver()
 {
-
+    alert("game over")
+    restart()
 }
 
 
