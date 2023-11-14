@@ -20,7 +20,7 @@ const startGame = document.querySelector(".overlay-text.visible");
 console.log(startGame) 
 startGame.addEventListener("click",  ()=>{
     startGame.classList.remove("visible")
-    alert("hi")
+
 });
 
 const overlays = Array.from(document.querySelector(".overlay-text"));
@@ -217,12 +217,11 @@ function win()
         
 
     }
-     restart()
+
+    document.addEventListener("click",  ()=>{ restart() }); 
     document.getElementById("you-won-text").classList.add("visible");
-    timer.seconds = 0;
     gameStart = false;
-    // alert("CONGRATULATIONS!!! YOU WIN.");
-    // restart()
+   
 
     
 
@@ -237,14 +236,14 @@ function win()
 function restart()
 {
     
-    let playAgain = prompt("Play again Y/N?");
-    console.log(playAgain);
+    // let playAgain = prompt("Play again Y/N?");
+    // console.log(playAgain);
 
-    if(playAgain == "Y")
-    {
-        location.reload();
-    }
-     
+    // if(playAgain == "Y")
+    // {
+    //     location.reload();
+    // }
+    location.reload(); 
 }
 
 
@@ -253,13 +252,12 @@ function restart()
 ///////////////////////////////GAME LOST/////////////////////////////////////////////
 function gameOver()
 {
-    // alert("game over")
-    // endGame.addEventListener("click",  ()=>{
-    //             endGame.classList.add(".visible")
-    //             alert("game over")
-    //         });
+    
+    document.addEventListener("click",  ()=>{
+                restart()
+            });
     document.getElementById("game-over-text").classList.add("visible");
-    // alert("hi")
+    
     // restart()
     
 }
