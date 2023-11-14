@@ -11,11 +11,20 @@ const solutionPuzzle = ["1", "2", "3", "4", "5", "6","7","8","9"];
 let puzzle; 
 // console.log(puzzle)
 
+let gameStart = false;
 
 
-// function start(){
 
-// }
+/////////////////////////////OVERLAY FUNCTIONALITY//////////////////////////
+const startGame = document.querySelector(".overlay-text .visible");
+    console.log(startGame) 
+    startGame.addEventListener("click",  ()=>{
+        // startGame[0].classList.remove("visible")
+        alert("hi")
+    });
+    
+
+
 
 ///////BOARD FUNCTIONALITY/////////////////////////////////////
 window.onload = function loadGame(){
@@ -79,7 +88,11 @@ function dragDrop()
 }
 
 function dragEnd()
+
 {
+    if(!gameStart){
+        return
+    }
     if(!blankPiece.src.includes("3.jpg")){
         return;
     }
@@ -126,6 +139,8 @@ function dragEnd()
     
 }
 
+
+
 //////////////////////////////////TIMER/////////////////////////////////////////////
 const keepPlaying = document.querySelector("#continue");
 
@@ -136,6 +151,7 @@ keepPlaying.addEventListener("click",  function(){
 function timer(minutes){
     let seconds = 5;
     let min = minutes;
+    gameStart = true;
 
     function ticking () {
         
@@ -158,6 +174,9 @@ function timer(minutes){
             gameOver()
     
         }
+
+        
+        
         
     }
     ticking();
@@ -184,7 +203,8 @@ function win()
 
 
     }
-    alert("CONGRATULATIONS!!! YOU WIN."); 
+    alert("CONGRATULATIONS!!! YOU WIN.");
+    restart() 
     
 
     
@@ -214,8 +234,10 @@ function restart()
 ///////////////////////////////GAME LOST/////////////////////////////////////////////
 function gameOver()
 {
-    alert("game over")
-    restart()
+    // alert("game over")
+    // restart()
+    // ready()
+    document.getElementById("game-over-text").addEventListener("visible");
 }
 
 
