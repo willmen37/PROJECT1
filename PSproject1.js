@@ -16,19 +16,13 @@ let gameStart = false;
 
 
 /////////////////////////////OVERLAY FUNCTIONALITY//////////////////////////
-// const startGame = document.querySelector(".overlay-text.visible");
-// const wonGame = document.querySelector(".overlay-text");
+const startGame = document.querySelector(".overlay-text.visible");
+console.log(startGame) 
+startGame.addEventListener("click",  ()=>{
+    startGame.classList.remove("visible")
+    alert("hi")
+});
 
-//     console.log(startGame) 
-//     startGame.addEventListener("click",  ()=>{
-//         startGame.classList.remove("visible")
-//         alert("hi")
-//     });
-
-//     wonGame.addEventListener("click",  ()=>{
-    //         wonGame.classList.add("visible")
-    //         alert("won")
-    //     });
 const overlays = Array.from(document.querySelector(".overlay-text"));
 
 overlays.forEach(overlay => {
@@ -168,12 +162,14 @@ keepPlaying.addEventListener("click",  function(){
 });
 
 function timer(minutes){
-    let seconds = 60;
+    let seconds = 30;
     let min = minutes;
     gameStart = true;
 
     function ticking () {
-        
+        if(!gameStart){
+            return
+        }
         let timing = document.getElementById("timer");
         let lapsedMinutes = min -1 
         seconds--;
@@ -218,10 +214,16 @@ function win()
         }
 
 
+        
+
     }
+     restart()
     document.getElementById("you-won-text").classList.add("visible");
+    timer.seconds = 0;
+    gameStart = false;
     // alert("CONGRATULATIONS!!! YOU WIN.");
-    // restart() 
+    // restart()
+
     
 
     
