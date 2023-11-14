@@ -16,12 +16,31 @@ let gameStart = false;
 
 
 /////////////////////////////OVERLAY FUNCTIONALITY//////////////////////////
-const startGame = document.querySelector(".overlay-text .visible");
-    console.log(startGame) 
-    startGame.addEventListener("click",  ()=>{
-        // startGame[0].classList.remove("visible")
-        alert("hi")
+// const startGame = document.querySelector(".overlay-text.visible");
+// const wonGame = document.querySelector(".overlay-text");
+
+//     console.log(startGame) 
+//     startGame.addEventListener("click",  ()=>{
+//         startGame.classList.remove("visible")
+//         alert("hi")
+//     });
+
+//     wonGame.addEventListener("click",  ()=>{
+    //         wonGame.classList.add("visible")
+    //         alert("won")
+    //     });
+const overlays = Array.from(document.querySelector(".overlay-text"));
+
+overlays.forEach(overlay => {
+    overlay.addEventListener("click",  ()=>{
+        overlay.classList.remove("visible")
+        alert("game over")
     });
+});
+
+
+
+
     
 
 
@@ -149,7 +168,7 @@ keepPlaying.addEventListener("click",  function(){
 });
 
 function timer(minutes){
-    let seconds = 5;
+    let seconds = 60;
     let min = minutes;
     gameStart = true;
 
@@ -172,12 +191,9 @@ function timer(minutes){
         if(seconds == 0){
 
             gameOver()
+            
     
-        }
-
-        
-        
-        
+        }  
     }
     ticking();
     
@@ -203,8 +219,9 @@ function win()
 
 
     }
-    alert("CONGRATULATIONS!!! YOU WIN.");
-    restart() 
+    document.getElementById("you-won-text").classList.add("visible");
+    // alert("CONGRATULATIONS!!! YOU WIN.");
+    // restart() 
     
 
     
@@ -235,9 +252,14 @@ function restart()
 function gameOver()
 {
     // alert("game over")
+    // endGame.addEventListener("click",  ()=>{
+    //             endGame.classList.add(".visible")
+    //             alert("game over")
+    //         });
+    document.getElementById("game-over-text").classList.add("visible");
+    // alert("hi")
     // restart()
-    // ready()
-    document.getElementById("game-over-text").addEventListener("visible");
+    
 }
 
 
