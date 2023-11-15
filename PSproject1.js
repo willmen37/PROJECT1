@@ -34,11 +34,6 @@ overlays.forEach(overlay => {
 
 
 
-
-    
-
-
-
 ///////BOARD FUNCTIONALITY/////////////////////////////////////
 window.onload = function loadGame(){
     for (let i=0; i < xLine; i++){
@@ -155,14 +150,15 @@ function dragEnd()
 
 
 //////////////////////////////////TIMER/////////////////////////////////////////////
-const keepPlaying = document.querySelector("#continue");
+
+// const keepPlaying = document.querySelector("#continue");
 
 keepPlaying.addEventListener("click",  function(){
  timer(1)
 });
 
 function timer(minutes){
-    let seconds = 30;
+    let seconds = 31;
     let min = minutes;
     gameStart = true;
 
@@ -211,23 +207,13 @@ function win()
             // alert("wrong call");
             return false;
 
-        }
-
-
-        
+        }   
 
     }
 
     document.addEventListener("click",  ()=>{ restart() }); 
     document.getElementById("you-won-text").classList.add("visible");
-    gameStart = false;
-   
-
-    
-
-    
-    
-     
+    gameStart = false;   
     
 }
 
@@ -235,14 +221,6 @@ function win()
 
 function restart()
 {
-    
-    // let playAgain = prompt("Play again Y/N?");
-    // console.log(playAgain);
-
-    // if(playAgain == "Y")
-    // {
-    //     location.reload();
-    // }
     location.reload(); 
 }
 
@@ -253,13 +231,9 @@ function restart()
 function gameOver()
 {
     
-    document.addEventListener("click",  ()=>{
-                restart()
-            });
+    document.addEventListener("click",  ()=>{restart()});
     document.getElementById("game-over-text").classList.add("visible");
-    
-    // restart()
-    
+
 }
 
 

@@ -1,42 +1,28 @@
 body{
     
     text-align: center;
-    color: #CC0099;
-    background: url(background.jpg);
-    padding: 25px;
+    background: url(smily-rex.jpg);
+    padding: 20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
 
-
-#title{
-    /* border: 1px solid black; */
-    width: 380px;
-    height: 60px;
-    display: flex;
-    margin:0 auto;
-    flex-wrap: wrap;
-    text-align: center;
-    
-}
-
-
 #pieces{
-    border: 15px solid #000066;
+    border: 15px solid rgba(0, 0, 0, .8);
     display: flex;
     margin:0 auto;
     flex-wrap: wrap;
     width: 360px;
     height: 360px;
-    background-color: #585858;
+    background-color:rgba(0, 0, 0, .8);
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    box-shadow: 10px 10px #6666FF;
+    /* box-shadow: 10px 10px #1f2952; */
     outline-style: solid;
-    outline-color: #CC0099;
-    outline-width: medium;
+    outline-color: #b9936c;
+    outline-width: 4px;
     
 
     
@@ -45,13 +31,14 @@ body{
 #piece, img {
     width: 118px;
     height: 118px;
-    border: 1px solid #585858;
+    border: 1px solid #563f46;
     border-radius: 5px;
+    
 }
 
 #footer{
-    border: 15px solid #000066;
-    background-color: #000066;
+    border: 15px solid rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .8);
     width: 360px;
     height: 70px;
     display: flex;
@@ -61,32 +48,35 @@ body{
     flex-wrap: wrap;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    box-shadow: 10px 10px #6666FF;
+    /* box-shadow: 10px 10px #6666FF; */
     outline-style: solid;
-    outline-color: #CC0099;
-    outline-width: medium;
+    outline-color: #b9936c;
+    outline-width: 4px;
 }
 
 h1{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:Arial, sans-serif;
     text-align: center;
+    color: #b5e7a0;
+    
 }
 
-h3{
-    border: 1px solid black;
-    color: #CC00CC;
-    border-radius: 5px;
-    font-size: 30px;
+#timer{
 
-}
-
-#continue{
-    font-size: 24px;
+    margin:0 auto;
+    color: #e76a3f;
+    font-size: 70px; 
 
 }
 
+#giphy{
+    width: 30%;
+    height: 40%;
+}
 
 
+
+/*///////////////////overlay transition stilying/////////*/
 .overlay-text{
     display: none;
     position: fixed;
@@ -97,8 +87,8 @@ h3{
     justify-content: center;
     align-items: center;
     z-index: 100;
-    color:#CC0099;
-    font-family: sans-serif;
+    color:#f15f40;
+    /* font-family: sans-serif; */
 }
 
 .overlay-text-small{
