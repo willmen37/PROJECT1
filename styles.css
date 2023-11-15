@@ -10,19 +10,19 @@ body{
 }
 
 #pieces{
-    border: 15px solid rgba(0, 0, 0, .8);
+    /* border: 5px solid rgba(0, 0, 0, .8); */
     display: flex;
     margin:0 auto;
     flex-wrap: wrap;
     width: 360px;
     height: 360px;
-    background-color:rgba(0, 0, 0, .8);
+    /* background-color:rgba(0, 0, 0, .8); */
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     /* box-shadow: 10px 10px #1f2952; */
     outline-style: solid;
     outline-color: #b9936c;
-    outline-width: 4px;
+    outline-width: 2px;
     
 
     
@@ -37,7 +37,7 @@ body{
 }
 
 #footer{
-    border: 15px solid rgba(0, 0, 0, .8);
+    /* border: 5px solid rgba(0, 0, 0, .8); */
     background-color: rgba(0, 0, 0, .8);
     width: 360px;
     height: 70px;
@@ -51,7 +51,7 @@ body{
     /* box-shadow: 10px 10px #6666FF; */
     outline-style: solid;
     outline-color: #b9936c;
-    outline-width: 4px;
+    outline-width: 2px;
 }
 
 h1{
