@@ -225,8 +225,9 @@ function win()
 
     document.addEventListener("click",  ()=>{ restart() }); 
     document.getElementById("you-won-text").classList.add("visible");
+    winAudio(); 
     gameStart = false; 
-    winAudio();  
+    
     
 }
 
