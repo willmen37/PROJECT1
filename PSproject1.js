@@ -10,8 +10,22 @@ const solutionPuzzle = ["1", "2", "3", "4", "5", "6","7","8","9"];
 
 let puzzle; 
 // console.log(puzzle)
-
 let gameStart = false;
+
+function playMusic(){
+    let audio = new Audio("GAME_SOUND.mp3");
+    audio.play()
+}
+
+function overAudio(){
+    let audio = new Audio("game-over.mp3");
+    audio.play()
+}
+
+function winAudio(){
+    let audio = new Audio("win.mp3");
+    audio.play()
+}
 
 
 
@@ -19,7 +33,8 @@ let gameStart = false;
 const startGame = document.querySelector(".overlay-text.visible");
 console.log(startGame) 
 startGame.addEventListener("click",  ()=>{
-    startGame.classList.remove("visible")
+    startGame.classList.remove("visible"),
+    playMusic()
 
 });
 
@@ -138,9 +153,6 @@ function dragEnd()
         currentPiece.src = replacedPiece;
         blankPiece.src = movedPiece;
     }
-
-    
-
     win()
 
 
@@ -151,14 +163,14 @@ function dragEnd()
 
 //////////////////////////////////TIMER/////////////////////////////////////////////
 
-// const keepPlaying = document.querySelector("#continue");
+const keepPlaying = document.querySelector("#continue");
 
 keepPlaying.addEventListener("click",  function(){
  timer(1)
 });
 
 function timer(minutes){
-    let seconds = 31;
+    let seconds = 50;
     let min = minutes;
     gameStart = true;
 
@@ -213,7 +225,8 @@ function win()
 
     document.addEventListener("click",  ()=>{ restart() }); 
     document.getElementById("you-won-text").classList.add("visible");
-    gameStart = false;   
+    gameStart = false; 
+    winAudio();  
     
 }
 
@@ -230,7 +243,7 @@ function restart()
 ///////////////////////////////GAME LOST/////////////////////////////////////////////
 function gameOver()
 {
-    
+    overAudio();
     document.addEventListener("click",  ()=>{restart()});
     document.getElementById("game-over-text").classList.add("visible");
 

@@ -12,33 +12,31 @@ body{
 #pieces{
     /* border: 5px solid rgba(0, 0, 0, .8); */
     display: flex;
-    margin:0 auto;
+    margin: 0 auto;
     flex-wrap: wrap;
-    width: 360px;
-    height: 360px;
+    width: 359px;
+    height: 359px;
     /* background-color:rgba(0, 0, 0, .8); */
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     /* box-shadow: 10px 10px #1f2952; */
     outline-style: solid;
     outline-color: #b9936c;
-    outline-width: 2px;
-    
-
-    
+    outline-width: 2px;   
 }
 
 #piece, img {
     width: 118px;
     height: 118px;
-    border: 1px solid #563f46;
+    border: 1px solid #b9936c;
     border-radius: 5px;
+    
     
 }
 
 #footer{
     /* border: 5px solid rgba(0, 0, 0, .8); */
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .7);
     width: 360px;
     height: 70px;
     display: flex;
@@ -53,6 +51,8 @@ body{
     outline-color: #b9936c;
     outline-width: 2px;
 }
+
+
 
 h1{
     font-family:Arial, sans-serif;
@@ -72,6 +72,7 @@ h1{
 #giphy{
     width: 30%;
     height: 40%;
+    border-radius: 120px;
 }
 
 
