@@ -20,6 +20,7 @@ function playMusic(){
 function overAudio(){
     let audio = new Audio("game-over.mp3");
     audio.play()
+  
 }
 
 function winAudio(){
@@ -33,8 +34,9 @@ function winAudio(){
 const startGame = document.querySelector(".overlay-text.visible");
 console.log(startGame) 
 startGame.addEventListener("click",  ()=>{
-    startGame.classList.remove("visible"),
-    playMusic()
+    startGame.classList.remove("visible")
+    // playMusic()
+
 
 });
 
@@ -163,7 +165,7 @@ function dragEnd()
 
 //////////////////////////////////TIMER/////////////////////////////////////////////
 
-const keepPlaying = document.querySelector("#continue");
+// const keepPlaying = document.querySelector("#continue");
 
 keepPlaying.addEventListener("click",  function(){
  timer(1)
