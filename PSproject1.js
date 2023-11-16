@@ -34,8 +34,8 @@ function winAudio(){
 const startGame = document.querySelector(".overlay-text.visible");
 console.log(startGame) 
 startGame.addEventListener("click",  ()=>{
-    startGame.classList.remove("visible")
-    // playMusic()
+    startGame.classList.remove("visible"),
+    playMusic()
 
 
 });
@@ -58,7 +58,7 @@ window.onload = function loadGame(){
 
             let piece = document.createElement('img');
             piece.id = i.toString() + "-" + j.toString();
-            piece.src = originalPuzzle.shift() + ".jpg";
+            piece.src = originalPuzzle.shift() + ".png";
                    
             //Movement functionality
 
@@ -118,7 +118,7 @@ function dragEnd()
     if(!gameStart){
         return
     }
-    if(!blankPiece.src.includes("3.jpg")){
+    if(!blankPiece.src.includes("3.png")){
         return;
     }
 
@@ -165,7 +165,7 @@ function dragEnd()
 
 //////////////////////////////////TIMER/////////////////////////////////////////////
 
-// const keepPlaying = document.querySelector("#continue");
+const keepPlaying = document.querySelector("#continue");
 
 keepPlaying.addEventListener("click",  function(){
  timer(1)

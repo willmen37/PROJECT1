@@ -22,15 +22,16 @@ body{
     border-top-left-radius: 5px;
     /* box-shadow: 10px 10px #1f2952; */
     outline-style: solid;
-    outline-color: #b9936c;
+    outline-color: #c1502e;
     outline-width: 2px;   
 }
 
 #piece, img {
     width: 118px;
     height: 118px;
-    border: 1px solid #b9936c;
+    border: 1px solid #c1502e;
     border-radius: 5px;
+    background-color: rgba(0, 0, 0, .7);
     
     
 }
@@ -53,7 +54,7 @@ body{
     border-bottom-left-radius: 5px;
     /* box-shadow: 10px 10px #6666FF; */
     outline-style: solid;
-    outline-color: #b9936c;
+    outline-color: #c1502e;
     outline-width: 2px;
 }
 
@@ -69,7 +70,7 @@ h1{
 #timer{
 
     margin:0 auto;
-    color: #e76a3f;
+    color: #b5e7a0;
     font-size: 70px; 
 
 }
