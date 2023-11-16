@@ -1,12 +1,15 @@
+//BOARD SIZE//////////////////////////////////////////////////////////////////////////////
 let xLine = 3;
 let yLine = 3;
+
+
 
 let currentPiece;
 let blankPiece;
 
-
 let originalPuzzle = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
 const solutionPuzzle = ["1", "2", "3", "4", "5", "6","7","8","9"];
+
 
 let puzzle; 
 // console.log(puzzle)
@@ -15,10 +18,17 @@ let gameStart = false;
 function playMusic(){
     let audio = new Audio("GAME_SOUND.mp3");
     audio.play()
+    audio.volume = 0.5;
+}
+
+function stopMusic (){
+    playMusic().pause();
+
 }
 
 function overAudio(){
     let audio = new Audio("game-over.mp3");
+    
     audio.play()
   
 }
@@ -45,7 +55,7 @@ const overlays = Array.from(document.querySelector(".overlay-text"));
 overlays.forEach(overlay => {
     overlay.addEventListener("click",  ()=>{
         overlay.classList.remove("visible")
-        alert("game over")
+        
     });
 });
 
@@ -83,7 +93,7 @@ window.onload = function loadGame(){
     
 }
 
-function dragStart()
+function dragStart() 
 {
     currentPiece = this; //piece being selected by clicking
     // console.log(currentPiece)
@@ -91,28 +101,28 @@ function dragStart()
 }
 
 
-function dragOver(e)
+function dragOver(e) //moving piece around while clicked
 {
     e.preventDefault()
 }
 
-function dragEnter(e)
+function dragEnter(e) //get piece on top of another piece
 {
     e.preventDefault()
 }
 
-function dragLeave(e)
+function dragLeave(e) //overpassing a piece 
 {
    e.preventDefault()
 }
 
-function dragDrop()
+function dragDrop()   // unclick the piece into a new position
 {
     blankPiece = this; // piece being replaced
     
 }
 
-function dragEnd()
+function dragEnd() //swap the pieces
 
 {
     if(!gameStart){
@@ -172,7 +182,7 @@ keepPlaying.addEventListener("click",  function(){
 });
 
 function timer(minutes){
-    let seconds = 50;
+    let seconds = 61;
     let min = minutes;
     gameStart = true;
 
@@ -197,6 +207,7 @@ function timer(minutes){
         if(seconds == 0){
 
             gameOver()
+            
             
     
         }  
