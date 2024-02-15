@@ -9,6 +9,44 @@ body{
     background-position: center;
 }
 
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Overlay text and image */
+    .overlay-text {
+        font-size: 1em; /* Adjust font size */
+    }
+    #giphy {
+        width: 20%; /* Adjust image size */
+        height: 30%;
+    }
+
+    /* Game board */
+    #pieces {
+        width: 80%; /* Adjust width */
+        height: auto; /* Allow height to adjust */
+    }
+    #piece, img {
+        width: 30%; /* Adjust puzzle piece size */
+        height: 30%;
+    }
+
+    /* Footer */
+    #footer {
+        width: 80%; /* Adjust width */
+        height: auto; /* Allow height to adjust */
+    }
+
+    /* Timer */
+    #timer {
+        font-size: 40px; /* Decrease font size */
+    }
+
+    /* Game title */
+    h1 {
+        font-size: 1.5em; /* Decrease font size */
+    }
+}
+
 #pieces{
     
     display: flex;
